@@ -66,7 +66,7 @@ This project uses `uv` for dependency management. If you don't have `uv` install
 3. **Configure environment**:
    ```bash
    cp .env.example .env
-   # Edit .env with your OpenAI API key and Supabase URI
+   # Edit .env with your NVIDIA API key and Supabase URI
    ```
 
 4. **Setup database** (create free Supabase account at [supabase.com](https://supabase.com)):
@@ -171,7 +171,7 @@ The project includes these main tables:
 - [LangGraph Documentation](https://langchain-ai.github.io/langgraph/)
 - [Model Context Protocol](https://modelcontextprotocol.io/)
 - [RFM Analysis Guide](https://en.wikipedia.org/wiki/RFM_(market_research))
-- [OpenAI API Documentation](https://platform.openai.com/docs)
+- [NVIDIA API Documentation](https://build.nvidia.com/nvidia/llama-3_1-nemotron-ultra-253b-v1/deploy)
 
 ## 🤝 Contributing
 
