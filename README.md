@@ -173,14 +173,6 @@ The project includes these main tables:
 - [RFM Analysis Guide](https://en.wikipedia.org/wiki/RFM_(market_research))
 - [NVIDIA API Documentation](https://build.nvidia.com/nvidia/llama-3_1-nemotron-ultra-253b-v1/deploy)
 
-## 🤝 Contributing
-
-This is a tutorial project, but contributions are welcome! Please:
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
 
 ## 📄 License
 
