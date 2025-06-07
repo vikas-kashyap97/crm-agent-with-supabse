@@ -1,10 +1,10 @@
-# 🤖 CRM Agent Tutorial - Ralph the Marketing AI
+# 🤖 CRM Agent - Ralph the Marketing AI
 
-Welcome to the **CRM Agent Tutorial**! This project demonstrates how to build an intelligent Customer Relationship Management (CRM) system using AI agents, LangGraph, and real customer data. Meet **Ralph** - your AI-powered marketing assistant who can analyze customer behavior, create personalized marketing campaigns, and automate email communications.
+Welcome to the **CRM Agent**! This project demonstrates how to build an intelligent Customer Relationship Management (CRM) system using AI agents, LangGraph, and real customer data. Meet **Ralph** - your AI-powered marketing assistant who can analyze customer behavior, create personalized marketing campaigns, and automate email communications.
 
 ## 🎯 What You'll Learn
 
-- Build an AI agent using **LangGraph** and **OpenAI**
+- Build an AI agent using **LangGraph** and **NVIDIA**
 - Implement **human-in-the-loop** workflows for sensitive operations
 - Create **RFM (Recency, Frequency, Monetary) analysis** for customer segmentation
 - Design **personalized marketing campaigns** using AI
@@ -44,8 +44,7 @@ Before you begin, ensure you have:
 
 - **Python 3.13+** installed
 - **PostgreSQL** database (we'll use Supabase)
-- **OpenAI API key**
-- **Git** for cloning the repository
+- **NVIDIA API key**
 
 ## ⚡ Quick Start
 
@@ -59,21 +58,25 @@ This project uses `uv` for dependency management. If you don't have `uv` install
    cd crm-agent
    uv sync  # Install dependencies
    ```
-
-2. **Configure environment**:
+2. **For ralph activation**:
+   ```bash
+   cd frontend
+   uv pip install -e .
+   ```
+3. **Configure environment**:
    ```bash
    cp .env.example .env
    # Edit .env with your OpenAI API key and Supabase URI
    ```
 
-3. **Setup database** (create free Supabase account at [supabase.com](https://supabase.com)):
+4. **Setup database** (create free Supabase account at [supabase.com](https://supabase.com)):
    - Create a new Supabase project. Use the generate_password feature to generate a secure password, copy it into the .env file for use later.
    - Copy the connection string from the Supabase project settings and paste it into the .env file (you'll see a 'connect' button at the top of the dashboard), replacing the placeholder with the actual connection string.
    - Replace the password placeholder with the password you generated earlier.
    - Copy and paste the sql from `db/migration-create-tables.sql` into the Supabase SQL editor. This will automatically create all of the db tables for you.
    - Import each CSV file from the `data` directory into the corresponding table in Supabase.
 
-4. **Verify and run**:
+5. **Verify and run**:
    ```bash
    cd frontend && uv run python chat_local.py  # Start chatting with Ralph!
    ```
@@ -152,17 +155,6 @@ The project includes these main tables:
 - **marketing_campaigns**: Campaign tracking
 - **campaign_emails**: Email delivery and engagement tracking
 
-## Adding New Tools
-
-Create new MCP tools in `src/ralph/mymcp/servers/marketing_server.py`:
-
-```python
-@mcp.tool()
-async def your_new_tool(param: str) -> str:
-    """Your tool description."""
-    # Your implementation here
-    return "Tool result"
-```
 
 ## 📚 Learning Resources
 
@@ -194,6 +186,3 @@ This is a tutorial project, but contributions are welcome! Please:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-**Happy Learning! 🚀**
-
-If you found this tutorial helpful, please ⭐ star the repository and subscribe to the [YouTube channel](https://www.youtube.com/@KennethLiao) for more AI tutorials!
